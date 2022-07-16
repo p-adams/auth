@@ -18,6 +18,7 @@ int main(int argc, char const *argv[])
             std::cin.ignore();
 
             std::getline(std::cin, username);
+
             std::cout << "PASSWORD: ";
             std::getline(std::cin, password);
 
@@ -27,7 +28,21 @@ int main(int argc, char const *argv[])
         }
         else if (option == 2)
         {
-            std::cout << "REGISTER" << std::endl;
+            // TODO: create utility function to get username and password from IO
+            std::string username;
+            std::string password;
+            std::cout << "USERNAME: ";
+
+            std::cin.ignore();
+
+            std::getline(std::cin, username);
+
+            std::cout << "PASSWORD: ";
+            std::getline(std::cin, password);
+
+            // TODO: if auth file and user doesn't already exists in auth file
+            std::cout << "REGISTER: " << username << " : " << password << std::endl;
+            break;
         }
         else
         {
