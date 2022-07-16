@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/Users/p-adams/workspace/cpp_sandbox/auth/build",
-  "command": "/usr/bin/clang++   -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -o CMakeFiles/auth.dir/main.cpp.o -c /Users/p-adams/workspace/cpp_sandbox/auth/main.cpp",
-  "file": "/Users/p-adams/workspace/cpp_sandbox/auth/main.cpp"
-}
-]
