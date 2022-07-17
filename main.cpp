@@ -1,5 +1,7 @@
 #include <iostream>
 #include <fstream>
+#include <vector>
+
 int main(int argc, char const *argv[])
 {
     int option = 0;
@@ -21,8 +23,23 @@ int main(int argc, char const *argv[])
             std::cout << "PASSWORD: ";
             std::getline(std::cin, password);
 
-            // TODO: if auth file and user exists in auth file
-            std::cout << "LOGIN: " << username << " : " << password << std::endl;
+            std::string line;
+            std::ifstream file("../creds.txt");
+            bool loginFailed = false;
+            while (std::getline(file, line))
+            {
+                if (line.find(username, 0) == std::string::npos && line.find(password, 0) == std::string::npos)
+                {
+                    std::cout << "INCORRECT USERNAME OR PASSWORD" << std::endl;
+                    loginFailed = true;
+                    break;
+                }
+            }
+            if (!loginFailed)
+            {
+                std::cout << "LOGIN SUCCESSFUL" << std::endl;
+            }
+
             break;
         }
         else if (option == 2)
