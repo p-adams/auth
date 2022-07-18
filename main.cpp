@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <vector>
 
 int main(int argc, char const *argv[])
 {
@@ -24,20 +25,25 @@ int main(int argc, char const *argv[])
 
             std::string line;
             std::ifstream file("../creds.txt");
-            bool loginFailed = false;
+
+            std::vector<std::string> creds;
+
             while (std::getline(file, line))
             {
-                if (line.find(username, 0) == std::string::npos && line.find(password, 0) == std::string::npos)
-                {
-                    std::cout << "INCORRECT USERNAME OR PASSWORD" << std::endl;
-                    loginFailed = true;
-                    break;
-                }
+
+                creds.push_back(line);
             }
-            if (!loginFailed)
+
+            std::string usr = creds.at(0);
+            std::string pass = creds.at(1);
+
+            if (usr != username || pass != password)
             {
-                std::cout << "LOGIN SUCCESSFUL" << std::endl;
+                std::cout << "INCORRECT USERNAME OR PASSWORD" << std::endl;
+                break;
             }
+
+            std::cout << "LOGIN SUCCESSFUL" << std::endl;
 
             break;
         }
