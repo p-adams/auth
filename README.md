@@ -1,10 +1,10 @@
 ## Simple Auth
 
-Simple auth program implemented in various langauges that minimally demonstrates the following:
+Simple auth program implemented in various languages that minimally demonstrates the following:
 
-- Console IO
-- File IO
-- Error Handling
+- Console IO: get username/password from console
+- File IO: store/retrieve username/password from file
+- Error handling: terminate program when bad credentials are entered.
 
 ## About
 
