@@ -68,6 +68,7 @@ int main(int argc, char const *argv[])
         else
         {
             std::cout << "Good-bye!" << std::endl;
+            option = 3;
         }
     }
     return 0;
