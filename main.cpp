@@ -30,7 +30,6 @@ int main(int argc, char const *argv[])
 
             while (std::getline(file, line))
             {
-
                 creds.push_back(line);
             }
 
