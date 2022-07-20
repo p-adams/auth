@@ -6,6 +6,8 @@ Simple auth program that minimally demonstrates the following:
 - File IO: store/retrieve username/password from file
 - Error handling: terminate program when bad credentials are entered.
 
+Additional functionality may include: encryption, better credential storage format, allow three login attemps before terminating program, and more.
+
 ## About
 
 Simple Auth is an adaption of the Login and Registration System program featured on <a href>Top 10 C++ Projects Ideas for C++ Beginners</a>:
