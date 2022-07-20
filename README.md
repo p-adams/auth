@@ -1,6 +1,6 @@
 ## Simple Auth
 
-Simple auth program implemented in various languages that minimally demonstrates the following:
+Simple auth program that minimally demonstrates the following:
 
 - Console IO: get username/password from console
 - File IO: store/retrieve username/password from file
